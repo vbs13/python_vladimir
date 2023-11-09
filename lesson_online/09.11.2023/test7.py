@@ -7,10 +7,10 @@ for i in range(100):
 print(mas)
 
 maxx = 0
-k = 0
+n = 0
 for i in range(len(mas) - 1):
     if (mas[i] - mas[i + 1]) % 2 == 0 and (mas[i] % 19 == 0 or mas[i + 1] % 19 == 0):
-        k += 1
+        n += 1
         if maxx < mas[i] + mas[i + 1]:
             maxx = mas[i] + mas[i + 1]
-print(k, maxx)
+print(n, maxx)
