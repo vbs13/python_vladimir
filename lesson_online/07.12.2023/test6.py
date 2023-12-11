@@ -1,14 +1,17 @@
-m = input()
-n = input()
-A = m.split()
-B = n.split()
-print(A)
-print(B)
-
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 C = []
 
-for i in range(len(B) + 1):
-    for j in range(len(A) + 1):
-        if A[j] == B[i]:
-            C.append(i)
-print(C)
+for i in A:
+    if i not in C and i not in B:
+        C.append(i)
+
+for i in B:
+    if i not in C and i not in A:
+        C.append(i)
+
+C.sort()
+if C != []:
+    print(*C)
+else:
+    print('NO')
