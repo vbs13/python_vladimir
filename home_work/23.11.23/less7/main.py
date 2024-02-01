@@ -1,3 +1,9 @@
-original_prices = [1.25, -9.45, 10.22, 3.78, -5.92, 1.16]
+def f(x):
+    if x == 0:
+        return 0
+    elif x % 3 == 2:
+        return f(x - 1) + 1
+    elif x % 3 < 2:
+        return f((x - (x % 3)) / 3)
 
-#TODO Код писать здесь
+print(f(5))

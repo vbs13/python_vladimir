@@ -1,3 +1,12 @@
-original_prices = [1.25, -9.45, 10.22, 3.78, -5.92, 1.16]
+import sys
 
-#TODO Код писать здесь
+
+sys.setrecursionlimit(2025)
+
+def f(x):
+    if x < 7:
+        return 7
+    else:
+        return 2 * x + f(x - 1)
+
+print(f(2024) - f(2022))
