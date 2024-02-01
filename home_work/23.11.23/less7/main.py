@@ -6,4 +6,7 @@ def f(x):
     elif x % 3 < 2:
         return f((x - (x % 3)) / 3)
 
-print(f(5))
+for x in range(1, 1000):
+    if f(x) == 5:
+        print(x)
+        break

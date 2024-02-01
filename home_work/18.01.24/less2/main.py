@@ -5,4 +5,4 @@ res = ''
 alf_rus = ['абвгдеёжзийклмнопрстуфхцчшщъыьэюя']
 
 for i in len(s):
-    res += alf_rus[s[i] + ]
+    res += alf_rus[s[i]]
