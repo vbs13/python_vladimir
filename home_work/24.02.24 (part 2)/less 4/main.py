@@ -5,14 +5,17 @@ def num(s: str):
             k += 1
     return k
 
+def up(s: str):
+    for i in s:
+        if i.isupper():
+            return True
+    return False
+
 passw = input('Придумайте пароль: ')
-flag = False
-while flag != True:
-    if len(passw) >= 8:
-        if passw.islower() == False:
-            if num(passw) >= 3:
-                print('Это надежный пароль!')
-                flag = True
-    else:
+while True:
+    if len(passw) < 8 or num(passw) < 3 or up(passw) == False:
         print('Пароль ненадёжный. Попробуйте ещё раз.')
         passw = input('Придумайте пароль: ')
+    else:
+        print('Это надёжный пароль!')
+        break
