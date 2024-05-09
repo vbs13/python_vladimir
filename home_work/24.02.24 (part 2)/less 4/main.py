@@ -1,23 +1,18 @@
-def col(s):
+def num(s: str):
     k = 0
     for i in s:
-        if i.isdigit == True:
+        if i.isdigit():
             k += 1
-    if k >= 3:
-        return True
+    return k
+
+passw = input('Придумайте пароль: ')
+flag = False
+while flag != True:
+    if len(passw) >= 8:
+        if passw.islower() == False:
+            if num(passw) >= 3:
+                print('Это надежный пароль!')
+                flag = True
     else:
-        return False
-
-
-n = input('Придумайте пароль: ')
-
-while True:
-    if len(n) < 8:
-        if n.islower() == True:
-            if col(n) == False:
-                print('Пароль ненадёжный. Попробуйте ещё раз.')
-                n = input('Придумайте пароль: ')
-                continue
-            else:
-                print('Это надёжный пароль!')
-                break
+        print('Пароль ненадёжный. Попробуйте ещё раз.')
+        passw = input('Придумайте пароль: ')
