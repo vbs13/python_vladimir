@@ -9,6 +9,3 @@ def tr(x):
 
 for x in range(2030, -1, -1):
     a = 3 ** 100 - x
-    if tr(a) == 5:
-        print(x)
-        break
