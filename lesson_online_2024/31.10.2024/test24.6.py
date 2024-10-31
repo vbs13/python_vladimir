@@ -1,0 +1,15 @@
+f = open('C:/Users/Владимир/Downloads/24_18186.txt')
+s = f.read()
+
+
+s = s.replace('B', 'S')
+s = s.replace('C', 'S')
+s = s.replace('D', 'S')
+s = s.replace('F', 'S')
+s = s.replace('G', 'S')
+s = s.replace('H', 'S')
+s = s.replace('A', 'G')
+s = s.replace('E', 'G')
+s = s.replace('SSG', ' ')
+mas = s.split()
+print(max([len(x) for x in mas]) + 6)
